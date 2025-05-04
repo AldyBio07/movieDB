@@ -1,0 +1,209 @@
+:root {
+  --idlix-red: #e50914;
+  --idlix-red-dark: #b81d24;
+  --idlix-black: #141414;
+  --idlix-dark-gray: #1f1f1f;
+  --idlix-gray: #2f2f2f;
+  --idlix-light-gray: #808080;
+  --idlix-white: #f5f5f1;
+  --idlix-gold: #ffc107;
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --hover-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --transition-speed: 0.25s;
+}
+
+/* Global styles */
+body {
+  background-color: var(--idlix-black);
+  color: var(--idlix-white);
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/*   container width */
+.container {
+  max-width: 1200px;
+}
+
+.fw-bold {
+  font-weight: 700 !important;
+}
+
+.navbar-dark .navbar-brand {
+  color: var(--idlix-white);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  font-size: 1.5rem;
+}
+
+.navbar-brand span {
+  color: var(--idlix-red) !important;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--idlix-light-gray);
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.2s;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--idlix-white);
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+  color: var(--idlix-red);
+}
+
+/*   buttons */
+.btn {
+  border-radius: 0.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  padding: 0.5rem 1.25rem;
+  transition: all 0.2s;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--idlix-red);
+  color: var(--idlix-white);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: var(--idlix-red-dark);
+  color: var(--idlix-white);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(184, 29, 36, 0.3);
+}
+
+.btn-outline-secondary {
+  color: var(--idlix-white);
+  border: 1px solid var(--idlix-gray);
+  background-color: transparent;
+}
+
+.btn-outline-secondary:hover {
+  background-color: var(--idlix-gray);
+  color: var(--idlix-white);
+}
+
+.btn-outline-dark {
+  color: var(--idlix-white);
+  border: 1px solid var(--idlix-light-gray);
+  background-color: var(--idlix-gray);
+}
+
+.btn-outline-dark:hover {
+  background-color: var(--idlix-dark-gray);
+  border-color: var(--idlix-white);
+}
+
+.card {
+  background-color: var(--idlix-dark-gray);
+  border: none;
+  border-radius: 0.25rem;
+  transition: transform var(--transition-speed),
+    box-shadow var(--transition-speed);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--hover-shadow);
+}
+
+.card-body {
+  padding: 1rem;
+}
+
+.card-title {
+  color: var(--idlix-white);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.card-text {
+  color: var(--idlix-light-gray);
+  font-size: 0.875rem;
+}
+
+.card-img-top {
+  height: 350px;
+  object-fit: cover;
+  transition: transform var(--transition-speed);
+}
+
+.card:hover .card-img-top {
+  transform: scale(1.05);
+}
+
+/* Form Controls */
+.form-control,
+.form-select {
+  background-color: var(--idlix-dark-gray);
+  border: 1px solid var(--idlix-gray);
+  color: var(--idlix-white);
+  border-radius: 0.25rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--idlix-dark-gray);
+  border-color: var(--idlix-red);
+  color: var(--idlix-white);
+  box-shadow: 0 0 0 0.2rem rgba(229, 9, 20, 0.25);
+}
+
+.pagination .page-link:hover {
+  background-color: var(--idlix-gray);
+  border-color: var(--idlix-light-gray);
+  color: var(--idlix-white);
+}
+
+.pagination .page-item.active .page-link {
+  background-color: var(--idlix-red);
+  border-color: var(--idlix-red);
+  color: var(--idlix-white);
+}
+
+.pagination .page-item.disabled .page-link {
+  background-color: var(--idlix-dark-gray);
+  border-color: var(--idlix-gray);
+  color: var(--idlix-light-gray);
+}
+
+/*   now showing ribbon */
+.position-absolute.bottom-0.py-1 {
+  background-color: var(--idlix-red) !important;
+  color: var(--idlix-white);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 0.25rem 0;
+}
+
+/*   nav pills */
+.nav-pills .nav-link {
+  background-color: var(--idlix-dark-gray);
+  color: var(--idlix-white);
+  border-radius: 0.25rem;
+  margin-right: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.nav-pills .nav-link.active {
+  background-color: var(--idlix-red);
+  color: var(--idlix-white);
+}
